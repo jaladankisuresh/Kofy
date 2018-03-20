@@ -10,13 +10,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        lyt_email.setErrorEnabled(true)
         lyt_password.setPasswordVisibilityToggleEnabled(true)
         val validator = formValidator {
-            validator(txt_email) {
+            validator(lyt_email) {
                 notEmpty("Email cannot be empty")
                 email()
             }
-            validator(txt_password) {
+//            validator(txt_email) {
+//                notEmpty("Email cannot be empty")
+//                email()
+//            }
+            validator(lyt_password) {
                 minLength()
                 password("Password should contain special characters")
             }
