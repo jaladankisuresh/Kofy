@@ -1,4 +1,4 @@
-package com.imnotout.formvalidator
+package com.imnotout.kofy
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4

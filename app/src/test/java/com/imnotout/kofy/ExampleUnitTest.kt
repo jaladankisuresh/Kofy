@@ -1,4 +1,4 @@
-package com.imnotout.formvalidator
+package com.imnotout.kofy
 
 import org.junit.Test
 

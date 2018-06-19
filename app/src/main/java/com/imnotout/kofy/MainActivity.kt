@@ -1,4 +1,4 @@
-package com.imnotout.formvalidator
+package com.imnotout.kofy
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -12,18 +12,22 @@ class MainActivity : AppCompatActivity() {
 
 //        lyt_email.setErrorEnabled(true)
         lyt_password.setPasswordVisibilityToggleEnabled(true)
-        val validator = formValidator {
+        val kofy = kofyValidator {
             validator(lyt_email) {
                 notEmpty("Email cannot be empty")
-                email()
+                email("^\\w+@[a-zA-Z_]+?\\.[a-zA-Z]{2,3}\$")
             }
-            validator(txt_email) {
-                notEmpty("Email cannot be empty")
-                email()
+            validator(lyt_username) {
+                minLength()
+                maxLength(6, "Username should not exceed beyond 6 characters")
+                alphaNumeric()
             }
             validator(lyt_password) {
-                minLength()
+                minLength(6, "Should atleast be 6 characters long")
                 password("Password should contain special characters")
+            }
+            validator(lyt_dob) {
+                date()
             }
             validator(lyt_gender) {
                 notEmpty("Gender is mandatory")
@@ -33,8 +37,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
         btn_sign_up.setOnClickListener {
-            validator.validate()
-//            validator.validate(txt_email)
+            kofy.validate()
+//            kofy.validate(txt_email)
         }
     }
 }
