@@ -21,7 +21,6 @@ val kofy = kofyValidator {
 kofy.validate() // validates the complete form
 kofy.validate(lyt_email) // validates lyt_email view
 ```
-
 **validator** is the view level markup element for validating the view in context. All the **validator**'s share **kofyValidator** as their parent and are nested inside the **kofyValidator**  
 
 **_rule_** is a child element and can be defined under any view level **validator**. One could have multiple rules under any view   **validator** and any **_rule_** could be under multiple view level **validator**'s. Unlike **kofyValidator** and **validator**, **_rule_** is not a keyword, but a App defined custom rule in the rulesDictionary of [KofyValidator.kt](/app/src/main/java/com/imnotout/kofy/KofyValidator.kt)  
@@ -63,6 +62,7 @@ val kofy = kofyValidator {
 //            kofy.validate(lyt_email)
         }
 ```  
+And, that is
 ```
 validator(lyt_email)
 - not empty
