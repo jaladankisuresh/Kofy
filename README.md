@@ -1,5 +1,5 @@
 # Kofy
-Android Mini Framework for Validating User Input Forms/Views using Kotlin's Kotlin's [Type-Safe Builders](https://kotlinlang.org/docs/reference/type-safe-builders.html)  
+Android Mini Framework for Validating User Input Forms/Views using Kotlin's [Type-Safe Builders](https://kotlinlang.org/docs/reference/type-safe-builders.html)  
 
 What does this framework have to offer?
 - All the validation rules stay in a single place making your code REUSABLE and MAINTAINABLE.
