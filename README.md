@@ -63,7 +63,7 @@ val kofy = kofyValidator {
 //            kofy.validate(lyt_email)
         }
 ```  
-
+```
 validator(lyt_email)
 - not empty
 - validate email by passing regular expression as an argument
@@ -85,7 +85,7 @@ validator(lyt_gender)
 
 validator(chk_agree_terms)  
 - is checked
-
+```
 
 # Contribute
 You are welcome to do a pull request. It would greatly help this module if it could find more contributors to build it and test it.
